@@ -4,7 +4,8 @@
 
 [Research](#research-in-brief) ·
 [Code and experiments](#research-and-code) ·
-[Models and code structure](#models-and-code-structure) ·
+[Experimental scale](#experimental-scale) ·
+[Code structure](#code-structure) ·
 [Setup](#setup-and-running-experiments) ·
 [Citation](#citation-and-sources)
 
@@ -67,13 +68,78 @@ same feature-reuse rule. [Selection and evaluation details](docs/search-and-shar
 
 </details>
 
-## Models and code structure
+## Experimental scale
 
-Model-specific implementations are in [FLUX.1-dev](flux/), [Qwen-Image](qwen_image/),
-[HunyuanVideo](hunyuan_video/), and [Wan2.1](wan21/).
-The baseline study evaluates ten caching methods on images and nine on videos.
-DPCache is included only in the image comparison. The three target cache ratios
-are 0.58, 0.74, and 0.82.
+### Models, methods, and evaluation data
+
+The image models are [FLUX.1-dev](flux/) and [Qwen-Image](qwen_image/).
+The video models are [HunyuanVideo](hunyuan_video/) and
+[Wan2.1-T2V-1.3B](wan21/). The baseline experiments use **50 denoising steps**
+and target cache ratios **0.58, 0.74, and 0.82**, corresponding to 29, 37, and
+41 cached steps. Each video contains 65 frames.
+
+We compare **SeaCache, TeaCache, SenCache, DiCache, TaylorSeer, HiCache, L2P,
+DPCache, BudCache, and MeanCache**, alongside full-compute references. All ten
+methods are evaluated on images. Video evaluation uses nine methods, excluding
+DPCache. Adaptive methods are calibrated toward the target mean cache ratio.
+
+Each baseline model–method–ratio combination uses the datasets for its modality
+below. A run is one generation from one prompt and one noise seed. Baseline
+evaluation uses **three seeds per prompt**.
+
+| Modality | Dataset | Prompts | Runs per model, method, and cache ratio |
+|---|---|---:|---:|
+| Image | DrawBench | 200 | 600 |
+| Image | GenEval-style | 553 | 1,659 |
+| Image | PartiPrompts | 1,632 | 4,896 |
+| Image | DiffusionDB-clean10k | 10,000 | 30,000 |
+| Video | Penguin599 | 599 | 1,797 |
+| Video | VBench944 | 944 | 2,832 |
+
+This gives **12,385 prompts and 37,155 runs** per image model, method, and
+cache ratio, and **1,543 prompts and 4,629 runs** per video model, method, and
+cache ratio. Resolutions, sampling parameters, and seed values are in the
+[baseline protocol](docs/baselines.md#protocol).
+
+### Scale of the main experiments
+
+The studies below use different subsets and comparisons. Prompt sets and
+full-compute references are reused across experiments.
+
+| Experiment | Models | Sample scale |
+|---|---|---|
+| Adaptive schedule recurrence | Both image models | 891,720 runs from four adaptive methods, three cache ratios, and four datasets |
+| Shared-schedule reuse | All four models | Images: 544 selection prompts and 1,088 held-out PartiPrompts, three seeds. Videos: 150 prompts from each of two datasets, one seed per prompt |
+| Exhaustive schedule evaluation | FLUX.1-dev, cache ratio 0.82 | 1,370,754 schedules × four prompt–seed pairs = 5,483,016 cached images |
+| Transfer after exhaustive selection | FLUX.1-dev, cache ratio 0.82 | 337 candidate schedules; coverage measured on 2,381 new prompts with three seeds each |
+| Full-compute trajectory collection | All four models | 74,310 image trajectories and 4,629 trajectories from each video model |
+| Current and earlier error contributions | FLUX.1-dev | 100 PartiPrompts, SeaCache and TeaCache, two cache ratios near 0.58 and 0.82, one seed per prompt |
+| Single-step error propagation | FLUX.1-dev | 100 DrawBench prompts, three approximation policies, 49 tested step positions, one seed per prompt |
+| Main image schedule–policy comparison | Both image models | Four schedules × five policies × 1,632 PartiPrompts × three seeds at each of the three cache ratios |
+| Few-example schedule search | Both image models, all three cache ratios | Eight scoring prompt–seed pairs, 50 separate COCO validation prompts, and 37,155 evaluation runs per selected schedule across the four image datasets |
+
+The PSNR search compares hill climbing, simulated annealing, greedy coordinate
+ascent, and random search. The LPIPS objective experiments use hill climbing
+and simulated annealing. See [experimental scope](docs/experimental-scale.md)
+for the candidate budgets, analysis subsets, and additional video comparisons.
+
+### GPU-hours
+
+Compute is reported separately for each experiment and GPU type.
+
+| Experiment | GPU | GPU-hours | Basis |
+|---|---|---:|---|
+| Exhaustive FLUX.1-dev schedule evaluation | NVIDIA H100 | ≈3,600 | Estimated generation cost for 5,483,016 images at the measured 2.37 seconds per image |
+| HunyuanVideo schedule–policy experiments | NVIDIA H100 | 633 | Sum of recorded generation times for 62,976 videos |
+| Wan2.1 schedule–policy experiments | NVIDIA H100 | 469 | Sum of recorded generation times for 63,771 videos |
+
+The video timings include supplementary schedule–policy comparisons. These
+rows describe generation costs for the named experiments, rather than a total
+for the study. [Compute accounting](docs/experimental-scale.md#compute-accounting)
+also lists video calibration and metric-evaluation costs, and distinguishes
+H100 from RTX 6000 Pro measurements.
+
+## Code structure
 
 | Directory | Role |
 |---|---|
