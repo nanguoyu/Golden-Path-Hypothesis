@@ -1,0 +1,116 @@
+{
+  "schema": "video_spx.schedule.v1",
+  "schedule_id": "shared_K37",
+  "backbone": "wan21",
+  "row": "shared",
+  "group": "frozen",
+  "budget": "K37",
+  "nominal_k": 37,
+  "off_budget": false,
+  "num_steps": 50,
+  "bits": "00011101111011110111011110111101110111101111011110",
+  "cache_steps": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    24,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43,
+    45,
+    46,
+    47,
+    48
+  ],
+  "cache_count": 37,
+  "jvp_spans": {},
+  "jvp_span_global": 4,
+  "jvp_spans_are_per_edge": false,
+  "payload_modes": {
+    "reuse": "budcache",
+    "taylor_o1": "taylorseer_o1",
+    "hermite_o2": "hicache_o2",
+    "mean_vel": "meancache",
+    "di_two_anchor": "dicache"
+  },
+  "payload_feasible": {
+    "reuse": true,
+    "taylor_o1": true,
+    "hermite_o2": true,
+    "mean_vel": true,
+    "di_two_anchor": true
+  },
+  "payload_forbidden_steps": {
+    "reuse": [
+      0,
+      49
+    ],
+    "taylor_o1": [
+      0,
+      49
+    ],
+    "hermite_o2": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "mean_vel": [
+      0,
+      1,
+      49
+    ],
+    "di_two_anchor": [
+      0,
+      1,
+      49
+    ]
+  },
+  "payload_columns": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "source": "baseline_matrix_config.v1.json::schedule_tables.shared_K37",
+  "provenance": {
+    "table_id": "shared_K37",
+    "table_source_file": "local schedule search output",
+    "table_source_sha256": "7275f3bfdc701aac72f9076743ef7429a239790db3ca925c4d65fa20a05a1ff5",
+    "matrix_config_sha256": "6c7b2c5f241c70b4725789f7aca0b2837676153279429dd5e2cfbe2adbcea452",
+    "jvp_spans_are_per_edge": false,
+    "hamming_to_meancache": 16,
+    "hamming_to_budcache": 16,
+    "transpositions_to_meancache": 8,
+    "longest_cached_run": 4,
+    "max_full_step_gap": 5,
+    "first_cache_step": 3
+  }
+}

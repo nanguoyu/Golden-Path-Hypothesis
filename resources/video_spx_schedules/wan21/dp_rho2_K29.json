@@ -1,0 +1,114 @@
+{
+  "schema": "video_spx.schedule.v1",
+  "schedule_id": "dp_rho2_K29",
+  "backbone": "wan21",
+  "row": "dp_rho2",
+  "group": "control",
+  "budget": "K29",
+  "nominal_k": 29,
+  "off_budget": false,
+  "num_steps": 50,
+  "bits": "00001010110110110111011101110111011101101101010000",
+  "cache_steps": [
+    4,
+    6,
+    8,
+    9,
+    11,
+    12,
+    14,
+    15,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    33,
+    34,
+    35,
+    37,
+    38,
+    40,
+    41,
+    43,
+    45
+  ],
+  "cache_count": 29,
+  "jvp_spans": {},
+  "jvp_span_global": 4,
+  "jvp_spans_are_per_edge": false,
+  "payload_modes": {
+    "reuse": "budcache",
+    "taylor_o1": "taylorseer_o1",
+    "hermite_o2": "hicache_o2",
+    "mean_vel": "meancache",
+    "di_two_anchor": "dicache"
+  },
+  "payload_feasible": {
+    "reuse": true,
+    "taylor_o1": true,
+    "hermite_o2": true,
+    "mean_vel": true,
+    "di_two_anchor": true
+  },
+  "payload_forbidden_steps": {
+    "reuse": [
+      0,
+      49
+    ],
+    "taylor_o1": [
+      0,
+      49
+    ],
+    "hermite_o2": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "mean_vel": [
+      0,
+      1,
+      49
+    ],
+    "di_two_anchor": [
+      0,
+      1,
+      49
+    ]
+  },
+  "payload_columns": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "source": "resources/video_full_trajectory/wan21/density_form_wan21.json::rho2.vbench944",
+  "provenance": {
+    "constructor": "segment_cost_matrix + force_full + j_best_schedules (analysis/build_golden_path_family.py)",
+    "exponent": 1.0,
+    "max_gap": 15,
+    "rho2_dataset": "vbench944",
+    "forced_full": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "dp_cost": 0.2550392027209495,
+    "hamming_to_meancache": 18,
+    "hamming_to_budcache": 26,
+    "transpositions_to_meancache": 9,
+    "longest_cached_run": 3,
+    "max_full_step_gap": 4,
+    "first_cache_step": 4
+  }
+}

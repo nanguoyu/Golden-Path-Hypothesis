@@ -1,0 +1,13 @@
+# Separate evaluation environment; do not install into an image or Hunyuan runtime.
+# These numpy/transformers constraints also match the vendored VBench requirements.
+-r analysis.txt
+numpy<2
+transformers==4.33.2
+torch
+torchvision
+scikit-image
+lpips
+image-reward
+imageio
+imageio-ffmpeg
+tqdm

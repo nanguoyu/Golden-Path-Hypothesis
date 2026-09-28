@@ -1,0 +1,101 @@
+backbone	budget	row	group	schedule_id	off_budget	cache_count	first_cache_step	longest_cached_run	max_full_step_gap	hamming_to_meancache	transpositions_to_meancache	hamming_to_budcache	feasible_reuse	feasible_taylor_o1	feasible_hermite_o2	feasible_mean_vel	feasible_di_two_anchor	n_cells	source	bits
+hunyuan_video	K29	shared	frozen	shared_K29	0	29	3	2	3	20	10	24	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.triplet_K29	00010110101101101011010110110101101011011010110110
+hunyuan_video	K29	budcache	frozen	budcache_K29	0	29	12	6	7	12	6	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K29	00000000000010101110111111011110111111011111011010
+hunyuan_video	K29	meancache	frozen	meancache_K29	0	29	11	5	6	0	0	12	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K29	00000000000101011011101111011111011111011110111010
+hunyuan_video	K29	sea_top1	gate	sea_top1_K29	0	29	7	4	5	16	8	20	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000001010101101101101110111011110111101110110100
+hunyuan_video	K29	tea_top1	gate	tea_top1_K29	0	29	3	2	3	26	13	18	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00010110110110110110110110110110110110110101010010
+hunyuan_video	K29	sen_top1	gate	sen_top1_K29	0	29	10	4	5	16	8	14	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000000001101101110111011110111101111011101110100
+hunyuan_video	K29	di_top1	gate	di_top1_K29	0	29	11	6	7	14	7	14	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000000000111011101111101111110111110111101101000
+hunyuan_video	K29	uniform	control	uniform_K29	0	29	4	2	3	22	11	22	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001101101011011011011011010110110110110101101100
+hunyuan_video	K29	dp_rho2	control	dp_rho2_K29	0	29	7	4	5	16	8	18	1	1	1	1	1	5	resources/video_full_trajectory/hunyuan_video/density_form_hunyuan_video.json::rho2.vbench944	00000001010110111011101110111101111011101101101000
+hunyuan_video	K29	rand_1	control	rand_1_K29	0	29	3	9	10	26	13	20	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011010111110000100111111111000100001111101111010
+hunyuan_video	K29	rand_2	control	rand_2_K29	0	29	3	7	8	22	11	22	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011111100100101011111110110100011101000101111100
+hunyuan_video	K29	ham2	control	ham2_K29	0	29	8	5	6	2	1	14	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K29 table	00000000100101011011101101011111011111011110111010
+hunyuan_video	K29	ham4	control	ham4_K29	0	29	6	9	10	4	2	16	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K29 table	00000010000101011011100111111111011111011110101010
+hunyuan_video	K29	ham8	control	ham8_K29	0	29	5	8	9	8	4	16	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K29 table	00000100100101011011011111011111111011011010110010
+hunyuan_video	K29	ham2f	control	ham2f_K29	0	29	11	7	8	2	1	12	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000101011011101111011111011111011111110010
+hunyuan_video	K29	ham4f	control	ham4f_K29	0	29	11	14	15	4	2	12	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000101001011111111111111011111010110111010
+hunyuan_video	K29	ham8f	control	ham8f_K29	0	29	11	6	7	8	4	10	1	1	1	1	1	1	constructed: 4 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000111111011110111011010111011011110111010
+hunyuan_video	K37	shared	frozen	shared_K37	0	37	3	4	5	10	5	16	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.triplet_K37	00011101111011110111011110111101110111101111011110
+hunyuan_video	K37	budcache	frozen	budcache_K37	0	37	7	18	19	8	4	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K37	00000001001101111111110111111111111111111011111110
+hunyuan_video	K37	meancache	frozen	meancache_K37	0	37	7	12	13	0	0	8	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K37	00000001011011110111111111011111111111101111111110
+hunyuan_video	K37	sea_top1	gate	sea_top1_K37	0	37	3	8	9	14	7	10	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00010101101110111101111101111111011111111011111010
+hunyuan_video	K37	tea_top1	gate	tea_top1_K37	0	37	2	5	6	16	8	14	1	1	0	1	1	4	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00110111101111011111011111011111011110111011010110
+hunyuan_video	K37	di_top1	gate	di_top1_K37	0	37	11	34	35	8	4	6	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000000000111111111111111111111111111111111101110
+hunyuan_video	K37	sen_top1_off	gate	sen_top1_off_K37	1	36	10	10	11	9		5	1	1	1	1	1	1	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000000001111111110111111111101111111111011111110
+hunyuan_video	K37	uniform	control	uniform_K37	0	37	4	5	6	14	7	14	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001111101111011111011111011110111110111101111100
+hunyuan_video	K37	dp_rho2	control	dp_rho2_K37	0	37	4	8	9	12	6	12	1	1	1	1	1	5	resources/video_full_trajectory/hunyuan_video/density_form_hunyuan_video.json::rho2.vbench944	00001011011110111111011111111011111110111110111010
+hunyuan_video	K37	rand_1	control	rand_1_K37	0	37	3	10	11	16	8	18	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011110110111111011111011011110111010011111111110
+hunyuan_video	K37	rand_2	control	rand_2_K37	0	37	3	13	14	18	9	16	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011111110110111111110100110111111111111101100110
+hunyuan_video	K37	ham2	control	ham2_K37	0	37	3	12	13	2	1	10	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K37 table	00010001011011110111111111011111111111100111111110
+hunyuan_video	K37	ham4	control	ham4_K37	0	37	7	10	11	4	2	10	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K37 table	00000001111111110111011111010111111111101111111110
+hunyuan_video	K37	ham8	control	ham8_K37	0	37	5	12	13	8	4	12	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K37 table	00000100111111110111001111111111110111101111111110
+hunyuan_video	K37	ham2f	control	ham2f_K37	0	37	7	12	13	2	1	10	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001111010110111111111011111111111101111111110
+hunyuan_video	K37	ham4f	control	ham4f_K37	0	37	7	12	13	4	2	8	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001111011111111110110011111111111101111111110
+hunyuan_video	K37	ham8f	control	ham8f_K37	0	37	7	8	9	8	4	10	1	1	1	1	1	1	constructed: 4 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001111110111011111111011111111011111111011110
+hunyuan_video	K41	shared	frozen	shared_K41	0	41	3	7	8	10	5	10	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.triplet_K41	00011111101111111011111110111111101111111011111110
+hunyuan_video	K41	budcache	frozen	budcache_K41	0	41	4	26	27	6	3	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K41	00001011011110111111111111111111111111110111111110
+hunyuan_video	K41	meancache	frozen	meancache_K41	0	41	5	14	15	0	0	6	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K41	00000111011111111110111111111111110111111111111110
+hunyuan_video	K41	sea_top1	gate	sea_top1_K41	0	41	1	12	13	8	4	12	1	1	0	0	0	2	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	01010110111101111110111111111101111111111110111110
+hunyuan_video	K41	tea_top1	gate	tea_top1_K41	0	41	1	9	10	12	6	12	1	1	0	0	0	2	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	01011111110111111111011111111101111111101111011100
+hunyuan_video	K41	sen_top1	gate	sen_top1_K41	0	41	3	10	11	8	4	10	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00010110111111110111111111101111111111011111111110
+hunyuan_video	K41	di_top1	gate	di_top1_K41	0	41	6	27	28	6	3	6	1	1	1	1	1	5	resources/video_native_gate_paths/hunyuan_video/dataset_path_counts.tsv	00000011111111111111111111111111101111111111111100
+hunyuan_video	K41	uniform	control	uniform_K41	0	41	4	11	12	8	4	8	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001111111111011111111111011111111110111111111100
+hunyuan_video	K41	dp_rho2	control	dp_rho2_K41	0	41	3	12	13	10	5	6	1	1	1	1	1	5	resources/video_full_trajectory/hunyuan_video/density_form_hunyuan_video.json::rho2.vbench944	00011011111110111111111111011111111111101111110110
+hunyuan_video	K41	rand_1	control	rand_1_K41	0	41	3	13	14	10	5	10	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011111111111110111111011110011111111111101111110
+hunyuan_video	K41	rand_2	control	rand_2_K41	0	41	3	15	16	10	5	10	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011111101111111111110111111111111111011111101100
+hunyuan_video	K41	ham2	control	ham2_K41	0	41	5	14	15	2	1	6	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K41 table	00000111111111111110111111111111110111110111111110
+hunyuan_video	K41	ham4	control	ham4_K41	0	41	3	14	15	4	2	8	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K41 table	00011111011111011110111111111111110011111111111110
+hunyuan_video	K41	ham8	control	ham8_K41	0	41	3	11	12	8	4	8	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K41 table	00011111011111011111111011111111111011101111111110
+hunyuan_video	K41	ham2f	control	ham2f_K41	0	41	5	14	15	2	1	8	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K41 table, drawn strictly after its first cached step	00000111111111111110111111111111110011111111111110
+hunyuan_video	K41	ham4f	control	ham4f_K41	0	41	5	14	15	4	2	8	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K41 table, drawn strictly after its first cached step	00000111111111111110111111011111111111011111111110
+wan21	K29	shared	frozen	shared_K29	0	29	3	2	3	24	12	16	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.shared_K29	00010110101101101011010110110101101011011010110110
+wan21	K29	budcache	frozen	budcache_K29	0	29	5	4	5	22	11	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K29	00000100101101111011101100111101110110111010101010
+wan21	K29	meancache	frozen	meancache_K29	0	29	12	5	6	0	0	22	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K29	00000000000010110110111011110111101111101111101110
+wan21	K29	sea_top1	gate	sea_top1_K29	0	29	8	5	6	16	8	16	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000000101010101101101110111011111011111011101100
+wan21	K29	tea_top1	gate	tea_top1_K29	0	29	5	4	5	20	10	8	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000101101101110111101111011101110110101010101000
+wan21	K29	sen_top1	gate	sen_top1_K29	0	29	10	6	7	18	9	16	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000000001110111101111110111111011110111011010000
+wan21	K29	di_top1	gate	di_top1_K29	0	29	11	6	7	16	8	18	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000000000111111011111101111101111011101101010100
+wan21	K29	uniform	control	uniform_K29	0	29	4	2	3	20	10	20	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001101101011011011011011010110110110110101101100
+wan21	K29	dp_rho2	control	dp_rho2_K29	0	29	4	3	4	18	9	26	1	1	1	1	1	5	resources/video_full_trajectory/wan21/density_form_wan21.json::rho2.vbench944	00001010110110110111011101110111011101101101010000
+wan21	K29	rand_1	control	rand_1_K29	0	29	3	5	6	24	12	18	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00010100111101111100101001101011110010011101110110
+wan21	K29	rand_2	control	rand_2_K29	0	29	3	8	9	18	9	20	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011001101001110110101001111111101110010101011010
+wan21	K29	ham2	control	ham2_K29	0	29	12	5	6	2	1	20	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K29 table	00000000000010110110111110110111101111101111101110
+wan21	K29	ham4	control	ham4_K29	0	29	3	5	6	4	2	22	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K29 table	00010000000010110110111110110111101101101111101110
+wan21	K29	ham8	control	ham8_K29	0	29	5	5	6	8	4	20	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K29 table	00000110100000100111001011110111101111101111101110
+wan21	K29	ham2f	control	ham2f_K29	0	29	12	11	12	2	1	20	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000010110010111011110111101111111111101110
+wan21	K29	ham4f	control	ham4f_K29	0	29	12	8	9	4	2	20	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000011110110111111110111101110101111100110
+wan21	K29	ham8f	control	ham8f_K29	0	29	12	11	12	8	4	18	1	1	1	1	1	1	constructed: 4 random swaps from the meancache_K29 table, drawn strictly after its first cached step	00000000000010111010111111111110111111101111001010
+wan21	K37	shared	frozen	shared_K37	0	37	3	4	5	16	8	16	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.shared_K37	00011101111011110111011110111101110111101111011110
+wan21	K37	budcache	frozen	budcache_K37	0	37	5	11	12	12	6	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K37	00000100110110111111111101111111111101111111101110
+wan21	K37	meancache	frozen	meancache_K37	0	37	7	10	11	0	0	12	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K37	00000001011101111101111111101111111111011111111110
+wan21	K37	sea_top1	gate	sea_top1_K37	0	37	4	11	12	12	6	12	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00001010110111011110111111011111111111011111111010
+wan21	K37	sen_top1	gate	sen_top1_K37	0	37	10	19	20	8	4	10	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000000001111111111111011111111111111111110111110
+wan21	K37	di_top1	gate	di_top1_K37	0	37	6	10	11	10	5	12	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000011111111110111111111101111111011111011101100
+wan21	K37	tea_top1_off	gate	tea_top1_off_K37	1	36	5	8	9	13		15	1	1	1	1	1	1	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000111011111011111111011111110111110111011011010
+wan21	K37	uniform	control	uniform_K37	0	37	4	5	6	16	8	16	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001111101111011111011111011110111110111101111100
+wan21	K37	dp_rho2	control	dp_rho2_K37	0	37	3	6	7	14	7	14	1	1	1	1	1	5	resources/video_full_trajectory/wan21/density_form_wan21.json::rho2.vbench944	00010110111101111110111111011111101111101111011010
+wan21	K37	rand_1	control	rand_1_K37	0	37	3	12	13	14	7	16	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011101111111010111111111111011100111011011011110
+wan21	K37	rand_2	control	rand_2_K37	0	37	3	16	17	12	6	14	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011100011111111111111110110111011111011100111110
+wan21	K37	ham2	control	ham2_K37	0	37	6	10	11	2	1	14	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K37 table	00000011011101111101111111101111111110011111111110
+wan21	K37	ham4	control	ham4_K37	0	37	7	14	15	4	2	12	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K37 table	00000001111101111111111111101111111111010111110110
+wan21	K37	ham8	control	ham8_K37	0	37	3	13	14	8	4	16	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K37 table	00011011011100111111111111101111011011010111111110
+wan21	K37	ham2f	control	ham2f_K37	0	37	7	10	11	2	1	12	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001011111111101111110101111111111011111111110
+wan21	K37	ham4f	control	ham4f_K37	0	37	7	14	15	4	2	12	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001011101111111111111101111111011110111111110
+wan21	K37	ham8f	control	ham8f_K37	0	37	7	12	13	8	4	12	1	1	1	1	1	1	constructed: 4 random swaps from the meancache_K37 table, drawn strictly after its first cached step	00000001111111111110111110111111111111010111110110
+wan21	K41	shared	frozen	shared_K41	0	41	3	7	8	10	5	8	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.shared_K41	00011111101111111011111110111111101111111011111110
+wan21	K41	budcache	frozen	budcache_K41	0	41	4	20	21	8	4	0	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.budcache_K41	00001010111111111111011111111111111111111011111110
+wan21	K41	meancache	frozen	meancache_K41	0	41	5	14	15	0	0	8	1	1	1	1	1	5	baseline_matrix_config.v1.json::schedule_tables.meancache_K41	00000111011111111110111111111111110111111111111110
+wan21	K41	tea_top1	gate	tea_top1_K41	0	41	5	17	18	6	3	8	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000111111111111111110111111111111111110111111100
+wan21	K41	sen_top1	gate	sen_top1_K41	0	41	6	26	27	4	2	6	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000011111111111110111111111111111111111111110110
+wan21	K41	di_top1	gate	di_top1_K41	0	41	6	29	30	6	3	6	1	1	1	1	1	5	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00000011111111111111111111111111111011111111111010
+wan21	K41	sea_top1_off	gate	sea_top1_off_K41	1	40	2	14	15	9		7	1	1	0	1	1	1	resources/video_native_gate_paths/wan21/dataset_path_counts.tsv	00101011011110111111011111111111011111111111111010
+wan21	K41	uniform	control	uniform_K41	0	41	4	11	12	8	4	8	1	1	1	1	1	5	constructed: full steps evenly spaced over 3..48, {0,1,2,49} forced full	00001111111111011111111111011111111110111111111100
+wan21	K41	dp_rho2	control	dp_rho2_K41	0	41	3	11	12	10	5	8	1	1	1	1	1	5	resources/video_full_trajectory/wan21/density_form_wan21.json::rho2.vbench944	00011110111111111011111111111011111111110111110110
+wan21	K41	rand_1	control	rand_1_K41	0	41	3	14	15	10	5	8	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011110111011111111111111011111111111110110111110
+wan21	K41	rand_2	control	rand_2_K41	0	41	3	15	16	6	3	10	1	1	1	1	1	5	constructed: uniform draw of K steps from 3..48	00011111011111011110111111111011101111111111111110
+wan21	K41	ham2	control	ham2_K41	0	41	4	14	15	2	1	8	1	1	1	1	1	5	constructed: 1 random swaps from the meancache_K41 table	00001111011111111110111111111111110011111111111110
+wan21	K41	ham4	control	ham4_K41	0	41	3	14	15	4	2	10	1	1	1	1	1	5	constructed: 2 random swaps from the meancache_K41 table	00010111111111111110111111101111110111111111110110
+wan21	K41	ham8	control	ham8_K41	0	41	3	14	15	8	4	10	1	1	1	1	1	5	constructed: 4 random swaps from the meancache_K41 table	00011111011101111111111111001111111111111101111110
+wan21	K41	ham2f	control	ham2f_K41	0	41	5	14	15	2	1	8	1	1	1	1	1	1	constructed: 1 random swaps from the meancache_K41 table, drawn strictly after its first cached step	00000111111111111110111111111111110110111111111110
+wan21	K41	ham4f	control	ham4f_K41	0	41	5	14	15	4	2	6	1	1	1	1	1	1	constructed: 2 random swaps from the meancache_K41 table, drawn strictly after its first cached step	00000111111011111111011111111111110111111111111110

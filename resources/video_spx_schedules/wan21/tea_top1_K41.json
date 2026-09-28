@@ -1,0 +1,119 @@
+{
+  "schema": "video_spx.schedule.v1",
+  "schedule_id": "tea_top1_K41",
+  "backbone": "wan21",
+  "row": "tea_top1",
+  "group": "gate",
+  "budget": "K41",
+  "nominal_k": 41,
+  "off_budget": false,
+  "num_steps": 50,
+  "bits": "00000111111111111111110111111111111111110111111100",
+  "cache_steps": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "cache_count": 41,
+  "jvp_spans": {},
+  "jvp_span_global": 4,
+  "jvp_spans_are_per_edge": false,
+  "payload_modes": {
+    "reuse": "budcache",
+    "taylor_o1": "taylorseer_o1",
+    "hermite_o2": "hicache_o2",
+    "mean_vel": "meancache",
+    "di_two_anchor": "dicache"
+  },
+  "payload_feasible": {
+    "reuse": true,
+    "taylor_o1": true,
+    "hermite_o2": true,
+    "mean_vel": true,
+    "di_two_anchor": true
+  },
+  "payload_forbidden_steps": {
+    "reuse": [
+      0,
+      49
+    ],
+    "taylor_o1": [
+      0,
+      49
+    ],
+    "hermite_o2": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "mean_vel": [
+      0,
+      1,
+      49
+    ],
+    "di_two_anchor": [
+      0,
+      1,
+      49
+    ]
+  },
+  "payload_columns": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "source": "resources/video_native_gate_paths/wan21/dataset_path_counts.tsv",
+  "provenance": {
+    "gate": "teacache",
+    "selection": "pooled top-1 among exactly-K paths",
+    "realized_cache_count": 41,
+    "tie_broken_lexicographically": false,
+    "hamming_to_meancache": 6,
+    "hamming_to_budcache": 8,
+    "transpositions_to_meancache": 3,
+    "longest_cached_run": 17,
+    "max_full_step_gap": 18,
+    "first_cache_step": 5
+  }
+}

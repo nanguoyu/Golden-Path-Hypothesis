@@ -1,0 +1,1051 @@
+{
+  "schema": "schedule_search_config.v1",
+  "plan": "docs/schedule_search_plan_zh.md",
+  "calibration": {
+    "seeds": [
+      50042,
+      60042
+    ],
+    "seed_rule": "slots 0..3 take seeds[0], slots 4..7 take seeds[1]",
+    "pairs": [
+      {
+        "slot": "person",
+        "prompt": "Two giraffes in a room with people looking at them.",
+        "source": {
+          "dataset": "coco_2014_val",
+          "rule": "first image id whose instances carry supercategory 'person'; caption = that image's lowest caption id naming a category of that supercategory",
+          "image_id": 136,
+          "caption_id": 261999,
+          "supercategories": [
+            "animal",
+            "person"
+          ],
+          "caption_evidence": [
+            "people"
+          ]
+        },
+        "seed": 50042
+      },
+      {
+        "slot": "animal",
+        "prompt": "A dog sleeping on a show rack in the shoes.",
+        "source": {
+          "dataset": "coco_2014_val",
+          "rule": "first image id whose instances carry supercategory 'animal' and none of ['person']; caption = that image's lowest caption id naming a category of that supercategory",
+          "image_id": 42,
+          "caption_id": 645309,
+          "supercategories": [
+            "animal"
+          ],
+          "caption_evidence": [
+            "dog"
+          ]
+        },
+        "seed": 50042
+      },
+      {
+        "slot": "indoor_object",
+        "prompt": "a faucet running next to a dinosuar holding a toothbrush",
+        "source": {
+          "dataset": "coco_2014_val",
+          "rule": "first image id whose instances carry supercategory 'indoor' and none of ['person']; caption = that image's lowest caption id naming a category of that supercategory",
+          "image_id": 208,
+          "caption_id": 82664,
+          "supercategories": [
+            "appliance",
+            "indoor"
+          ],
+          "caption_evidence": [
+            "toothbrush"
+          ]
+        },
+        "seed": 50042
+      },
+      {
+        "slot": "outdoor_scene",
+        "prompt": "A traffic light over a street surrounded by tall buildings.",
+        "source": {
+          "dataset": "coco_2014_val",
+          "rule": "first image id whose instances carry supercategory 'outdoor' and none of ['person']; caption = that image's lowest caption id naming a category of that supercategory",
+          "image_id": 359,
+          "caption_id": 199256,
+          "supercategories": [
+            "outdoor",
+            "vehicle"
+          ],
+          "caption_evidence": [
+            "traffic light"
+          ]
+        },
+        "seed": 50042
+      },
+      {
+        "slot": "stylized_a",
+        "prompt": "illustration of a coffee, an art deco painting by tom whalen, trending on behance, art deco, digital illustration, storybook illustration, grainy texture, flat shading, vector art, airbrush, pastel, watercolor, poster",
+        "source": {
+          "dataset": "diffusiondb_2m_clean_calib512_seed20260729",
+          "rule": "first prompt in pool order matching ['oil painting', 'watercolor'] with 5..40 words; the pool already excludes the clean10k evaluation subset",
+          "pool_index": 115,
+          "word_count": 30,
+          "style_terms": [
+            "watercolor"
+          ]
+        },
+        "seed": 60042
+      },
+      {
+        "slot": "stylized_b",
+        "prompt": "Super Powered Karl Urban as an Apex Legends character digital illustration portrait design by, Mark Brooks and Brad Kunkle detailed, gorgeous lighting, wide angle action dynamic portrait",
+        "source": {
+          "dataset": "diffusiondb_2m_clean_calib512_seed20260729",
+          "rule": "first prompt in pool order matching ['illustration'] with 5..40 words; the pool already excludes the clean10k evaluation subset",
+          "pool_index": 14,
+          "word_count": 27,
+          "style_terms": [
+            "illustration"
+          ]
+        },
+        "seed": 60042
+      },
+      {
+        "slot": "counting",
+        "prompt": "Three people riding horses and mules over rocks",
+        "source": {
+          "dataset": "coco_2014_val",
+          "rule": "first caption by annotation id containing one of ['three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'], on an image no other slot used",
+          "image_id": 487239,
+          "caption_id": 189
+        },
+        "seed": 60042
+      },
+      {
+        "slot": "text_render",
+        "prompt": "a storefront with the word 'gleam' written on the sign",
+        "source": {
+          "dataset": "fixed_template",
+          "rule": "frozen in the plan"
+        },
+        "seed": 60042
+      }
+    ]
+  },
+  "arbitration": {
+    "seed": 50042,
+    "rule": "the next 50 COCO 2014 val captions by annotation id after the largest id the calibration slots used, skipping images the calibration already used",
+    "prompts": [
+      {
+        "prompt": "a boy is flying a kite in a field",
+        "image_id": 225108,
+        "caption_id": 645310
+      },
+      {
+        "prompt": "A plate of food on a dining table.",
+        "image_id": 346262,
+        "caption_id": 645313
+      },
+      {
+        "prompt": "A bear sits in the grass near a red chain linked fence.",
+        "image_id": 46898,
+        "caption_id": 645318
+      },
+      {
+        "prompt": "People in navy uniforms and one person talking on a walkie- talkie.",
+        "image_id": 3382,
+        "caption_id": 645322
+      },
+      {
+        "prompt": "Horse pulling carriage with two men followed by mounted guard in uniform.",
+        "image_id": 291305,
+        "caption_id": 645326
+      },
+      {
+        "prompt": "A large tall giraffe standing by a tree.",
+        "image_id": 402559,
+        "caption_id": 645337
+      },
+      {
+        "prompt": "A person on a cell phone on a street.",
+        "image_id": 7938,
+        "caption_id": 645338
+      },
+      {
+        "prompt": "Man and woman reclining on wood bench gazing up.",
+        "image_id": 398882,
+        "caption_id": 645347
+      },
+      {
+        "prompt": "a person is cutting into a large pizza",
+        "image_id": 181574,
+        "caption_id": 645350
+      },
+      {
+        "prompt": "A man flying a kite at the beach.",
+        "image_id": 100001,
+        "caption_id": 645354
+      },
+      {
+        "prompt": "A bunch of sandwiches sitting on a table with lobsters in the background.",
+        "image_id": 398727,
+        "caption_id": 645355
+      },
+      {
+        "prompt": "A woman eating a sandwich on a bench near the street.",
+        "image_id": 96711,
+        "caption_id": 645357
+      },
+      {
+        "prompt": "The woman is stirring the pot over the fire.",
+        "image_id": 268059,
+        "caption_id": 645359
+      },
+      {
+        "prompt": "The woman is tying her shoe on the park bench.",
+        "image_id": 328818,
+        "caption_id": 645360
+      },
+      {
+        "prompt": "A person on a board in the water.",
+        "image_id": 382770,
+        "caption_id": 645367
+      },
+      {
+        "prompt": "A stop sign on a pole on a street.",
+        "image_id": 91372,
+        "caption_id": 645369
+      },
+      {
+        "prompt": "Semi carrying cars on busy road in city near white car.",
+        "image_id": 460147,
+        "caption_id": 645372
+      },
+      {
+        "prompt": "A number of donuts on a box on the table",
+        "image_id": 564726,
+        "caption_id": 645373
+      },
+      {
+        "prompt": "A tennis player with a racket at the court",
+        "image_id": 502982,
+        "caption_id": 645375
+      },
+      {
+        "prompt": "A woman holding a big colorful kite next to a building.",
+        "image_id": 248965,
+        "caption_id": 645377
+      },
+      {
+        "prompt": "Person on a motorbike riding around a track as people watch.",
+        "image_id": 285192,
+        "caption_id": 645385
+      },
+      {
+        "prompt": "Some awful looking pasta with broccoli is seen here.",
+        "image_id": 66445,
+        "caption_id": 645392
+      },
+      {
+        "prompt": "A parking meter is in front of a white wall.",
+        "image_id": 335885,
+        "caption_id": 645393
+      },
+      {
+        "prompt": "A large herd of sheep standing in the grass.",
+        "image_id": 318911,
+        "caption_id": 645396
+      },
+      {
+        "prompt": "The green plant has buds growing from it.",
+        "image_id": 164710,
+        "caption_id": 645397
+      },
+      {
+        "prompt": "A teddy bear under some furniture that appears to be turned on it's side.",
+        "image_id": 446703,
+        "caption_id": 645405
+      },
+      {
+        "prompt": "A boat traveling down an open body of water.",
+        "image_id": 301641,
+        "caption_id": 645411
+      },
+      {
+        "prompt": "It is bright and sunny in the living room.",
+        "image_id": 109482,
+        "caption_id": 645412
+      },
+      {
+        "prompt": "There is a car parked in the handicapped spot.",
+        "image_id": 263594,
+        "caption_id": 645413
+      },
+      {
+        "prompt": "A little boy is excited to eat his lunch.",
+        "image_id": 525119,
+        "caption_id": 645419
+      },
+      {
+        "prompt": "A little girl is dressed for and ready to play tennis.",
+        "image_id": 280909,
+        "caption_id": 645430
+      },
+      {
+        "prompt": "Train with cars in rail yard waiting to load.",
+        "image_id": 200162,
+        "caption_id": 645436
+      },
+      {
+        "prompt": "Man and woman polishing surf board near tree.",
+        "image_id": 361804,
+        "caption_id": 645438
+      },
+      {
+        "prompt": "A person with a hat and a suitcase.",
+        "image_id": 449485,
+        "caption_id": 645439
+      },
+      {
+        "prompt": "A couple of horses and a dog in a field.",
+        "image_id": 335851,
+        "caption_id": 645441
+      },
+      {
+        "prompt": "Man at a restaurant with a piece of pastry stuffed in his mouth.",
+        "image_id": 347228,
+        "caption_id": 645454
+      },
+      {
+        "prompt": "The man is holding a pink iced doughnut.",
+        "image_id": 82157,
+        "caption_id": 645462
+      },
+      {
+        "prompt": "A person standing to a dog lying on the ground",
+        "image_id": 306339,
+        "caption_id": 645472
+      },
+      {
+        "prompt": "A group of people skiing on a foggy day",
+        "image_id": 100010,
+        "caption_id": 645473
+      },
+      {
+        "prompt": "A couple of elephants standing in a grass field.",
+        "image_id": 178592,
+        "caption_id": 645479
+      },
+      {
+        "prompt": "A cat is sitting in a window looking in the house.",
+        "image_id": 372979,
+        "caption_id": 645486
+      },
+      {
+        "prompt": "A person standing by a fence with a sheep.",
+        "image_id": 114710,
+        "caption_id": 645494
+      },
+      {
+        "prompt": "a cat is standing next to a picture of a fish",
+        "image_id": 419008,
+        "caption_id": 645502
+      },
+      {
+        "prompt": "A large black bear standing by a tree.",
+        "image_id": 408101,
+        "caption_id": 645506
+      },
+      {
+        "prompt": "The room has two bed and a chair.",
+        "image_id": 537513,
+        "caption_id": 645510
+      },
+      {
+        "prompt": "Baseball player holding bat on the field and other players in dugout behind him.",
+        "image_id": 269689,
+        "caption_id": 645521
+      },
+      {
+        "prompt": "a large blue truck is driving down the street",
+        "image_id": 334006,
+        "caption_id": 645526
+      },
+      {
+        "prompt": "A group of people in a boat in the water.",
+        "image_id": 30255,
+        "caption_id": 645530
+      },
+      {
+        "prompt": "A city street with several bright lights on poles.",
+        "image_id": 265243,
+        "caption_id": 645531
+      },
+      {
+        "prompt": "The man is acting silly with the food in his mouth.",
+        "image_id": 347228,
+        "caption_id": 645535
+      }
+    ]
+  },
+  "spaces": {
+    "flux": {
+      "num_steps": 50,
+      "forced_full_steps": [
+        0,
+        1,
+        2,
+        49
+      ],
+      "variable_start": 3,
+      "variable_end": 48,
+      "free_full_count": {
+        "29": 17,
+        "37": 9,
+        "41": 5
+      },
+      "space_size": {
+        "29": 1749695026860,
+        "37": 1101716330,
+        "41": 1370754
+      },
+      "payload": "residual_reuse",
+      "source": "analysis/build_spx_supplement_schedules.py:107 (CONTROL_FORCED_FULL, model-agnostic) and lib/exhaustive_schedule.py:22-28"
+    },
+    "qwen": {
+      "num_steps": 50,
+      "forced_full_steps": [
+        0,
+        1,
+        2,
+        49
+      ],
+      "variable_start": 3,
+      "variable_end": 48,
+      "free_full_count": {
+        "29": 17,
+        "37": 9,
+        "41": 5
+      },
+      "space_size": {
+        "29": 1749695026860,
+        "37": 1101716330,
+        "41": 1370754
+      },
+      "payload": "residual_reuse",
+      "source": "analysis/build_spx_supplement_schedules.py:107 (CONTROL_FORCED_FULL, model-agnostic) and lib/exhaustive_schedule.py:22-28"
+    }
+  },
+  "search": {
+    "search_seed": 20260901,
+    "caps": {
+      "29": 1400,
+      "37": 700,
+      "41": 400
+    },
+    "probe_evals": 50,
+    "chain_lengths": {
+      "29": 680,
+      "37": 360,
+      "41": 200
+    },
+    "hill_iters": 20,
+    "hill_window": 3,
+    "local_probability": 0.7,
+    "se_factor": 2.0,
+    "stop_units": 2,
+    "arbitration_candidates": 3,
+    "arbitration_min_hamming": 4,
+    "temperatures_note": "P1 backfill from resources/schedule_search/probes/: t_max = 10 x median |swap delta| of the objective's value, t_min = median / 100, two significant figures; the PSNR objective is [model][K], another objective is [objective][model][K]",
+    "temperatures": {
+      "flux": {
+        "29": {
+          "t_max": 0.24,
+          "t_min": 0.00024
+        },
+        "37": {
+          "t_max": 0.43,
+          "t_min": 0.00043
+        },
+        "41": {
+          "t_max": 0.54,
+          "t_min": 0.00054
+        }
+      },
+      "qwen": {
+        "29": {
+          "t_max": 0.17,
+          "t_min": 0.00017
+        },
+        "37": {
+          "t_max": 0.35,
+          "t_min": 0.00035
+        },
+        "41": {
+          "t_max": 0.77,
+          "t_min": 0.00077
+        }
+      },
+      "lpips": {
+        "flux": {
+          "29": {
+            "t_max": 0.0085,
+            "t_min": 8.5e-06
+          },
+          "37": {
+            "t_max": 0.034,
+            "t_min": 3.4e-05
+          },
+          "41": {
+            "t_max": 0.066,
+            "t_min": 6.6e-05
+          }
+        },
+        "qwen": {
+          "29": {
+            "t_max": 0.018,
+            "t_min": 1.8e-05
+          },
+          "37": {
+            "t_max": 0.04,
+            "t_min": 4e-05
+          },
+          "41": {
+            "t_max": 0.066,
+            "t_min": 6.6e-05
+          }
+        }
+      },
+      "psnr_lpips_z": {
+        "flux": {
+          "29": {
+            "t_max": 0.13,
+            "t_min": 0.00013
+          },
+          "37": {
+            "t_max": 0.72,
+            "t_min": 0.00072
+          },
+          "41": {
+            "t_max": 1.5,
+            "t_min": 0.0015
+          }
+        },
+        "qwen": {
+          "29": {
+            "t_max": 0.48,
+            "t_min": 0.00048
+          },
+          "37": {
+            "t_max": 0.75,
+            "t_min": 0.00075
+          },
+          "41": {
+            "t_max": 1.5,
+            "t_min": 0.0015
+          }
+        }
+      }
+    },
+    "objective_scales": {
+      "flux": {
+        "29": {
+          "psnr": {
+            "mean": 17.709073659796776,
+            "std": 1.430318733520529
+          },
+          "ssim": {
+            "mean": 0.6821528627471615,
+            "std": 0.047996343800826104
+          },
+          "lpips": {
+            "mean": 0.35449621435254813,
+            "std": 0.06766843644169926
+          },
+          "image_reward": {
+            "mean": 1.4193275271356105,
+            "std": 0.038224519281607285
+          },
+          "clip": {
+            "mean": 28.812625490128994,
+            "std": 0.2643023781157949
+          }
+        },
+        "37": {
+          "psnr": {
+            "mean": 17.10026610005291,
+            "std": 1.102900339124204
+          },
+          "ssim": {
+            "mean": 0.6481461271070955,
+            "std": 0.03934104452738085
+          },
+          "lpips": {
+            "mean": 0.42862202402204275,
+            "std": 0.06410321781066147
+          },
+          "image_reward": {
+            "mean": 1.3573686990141869,
+            "std": 0.06502372574406418
+          },
+          "clip": {
+            "mean": 28.9481262229383,
+            "std": 0.25140954765120915
+          }
+        },
+        "41": {
+          "psnr": {
+            "mean": 15.943704648179855,
+            "std": 0.9209468470948405
+          },
+          "ssim": {
+            "mean": 0.5843763725447586,
+            "std": 0.03359041014600118
+          },
+          "lpips": {
+            "mean": 0.5783919214457274,
+            "std": 0.07576142899512606
+          },
+          "image_reward": {
+            "mean": 1.0809894173266366,
+            "std": 0.474998233385036
+          },
+          "clip": {
+            "mean": 28.895341224968433,
+            "std": 0.9886829711513635
+          }
+        }
+      },
+      "qwen": {
+        "29": {
+          "psnr": {
+            "mean": 17.784214184900677,
+            "std": 1.6030924473102937
+          },
+          "ssim": {
+            "mean": 0.7507439128488336,
+            "std": 0.05549353456003456
+          },
+          "lpips": {
+            "mean": 0.2559272065199912,
+            "std": 0.06384547387989871
+          },
+          "image_reward": {
+            "mean": 1.4230950650572778,
+            "std": 0.04492438683971746
+          },
+          "clip": {
+            "mean": 29.093761570751667,
+            "std": 0.3604531001104934
+          }
+        },
+        "37": {
+          "psnr": {
+            "mean": 16.373417727496737,
+            "std": 1.551534291278793
+          },
+          "ssim": {
+            "mean": 0.6798844609587883,
+            "std": 0.06455577855629446
+          },
+          "lpips": {
+            "mean": 0.3547711285762489,
+            "std": 0.08183929128297207
+          },
+          "image_reward": {
+            "mean": 1.2570900754863397,
+            "std": 0.26988100512851504
+          },
+          "clip": {
+            "mean": 29.008973591029644,
+            "std": 0.5659035455957925
+          }
+        },
+        "41": {
+          "psnr": {
+            "mean": 14.172302138372903,
+            "std": 1.4268446685446172
+          },
+          "ssim": {
+            "mean": 0.5616750134917012,
+            "std": 0.061502013866820006
+          },
+          "lpips": {
+            "mean": 0.5268535520136356,
+            "std": 0.08472433382949289
+          },
+          "image_reward": {
+            "mean": 0.5175412595662056,
+            "std": 0.6825355940559243
+          },
+          "clip": {
+            "mean": 27.685761895030737,
+            "std": 2.021390923656176
+          }
+        }
+      }
+    },
+    "objective_scales_note": "mean and standard deviation of each metric's probe evaluation means, from resources/schedule_search/probes/; psnr_lpips_z standardises PSNR and negative LPIPS with them"
+  },
+  "warm_starts": {
+    "flux": {
+      "29": [
+        {
+          "name": "budcache",
+          "bits": "00001000111010010011011011110111011110111011010110"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000000010101101101110111011101111011110111011010"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00001010101101101110101101101101101101101101101010"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001101101011011011011010110110110110110101101100"
+        },
+        {
+          "name": "seacache_top1",
+          "bits": "00000001010101101101101110111011101110111011101100"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000000001101110111011110111011110111101110110100"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000000000111101110111110111101111011101101101010"
+        }
+      ],
+      "37": [
+        {
+          "name": "budcache",
+          "bits": "00000101111011101111101111111011111111101111101110"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000101101110111101111110111111110111111110111110"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00010110111101111110111101111101111101111011101110"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001111101111011111011110111110111110111101111100"
+        },
+        {
+          "name": "seacache_top1",
+          "bits": "00010101101110111101111110111111101111111011111010"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000000001111111111111011111111111111111101111110"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000000000111111111111111111111111111011111111110"
+        }
+      ],
+      "41": [
+        {
+          "name": "budcache",
+          "bits": "00010110111110111111011111111111111111101111111110"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000111101111111110111111111111110111111111111110"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00011011111011111111011111111011111111110111111110"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001111111111011111111110111111111110111111111100"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000011111111101111111111111111110111111111111110"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000011111111111111111111011111111111111110111110"
+        }
+      ]
+    },
+    "qwen": {
+      "29": [
+        {
+          "name": "budcache",
+          "bits": "00000000100101010111011011110111011110111110111010"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000000000101011011011101111011110111111011111010"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00010101101101101110111011011011010101010101011010"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001101101011011011011010110110110110110101101100"
+        },
+        {
+          "name": "seacache_top1",
+          "bits": "00000010101010110110111011101110111011101101101010"
+        },
+        {
+          "name": "teacache_top1",
+          "bits": "00011011011011011011101101110110110111010101010000"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000000001110111011110111110111101111011101101000"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000000000111011110111101111110111110111011010100"
+        }
+      ],
+      "37": [
+        {
+          "name": "budcache",
+          "bits": "00000010101011111101111111111011111111110111111110"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000010110111011111011111110111111111011111111110"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00011011101111011111011111011111011110111101101110"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001111101111011111011110111110111110111101111100"
+        },
+        {
+          "name": "seacache_top1",
+          "bits": "00010110111011110111110111111101111111011111011100"
+        },
+        {
+          "name": "teacache_top1",
+          "bits": "00011111011111101111110111111011111101111011101000"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000000001111111111111101111111111111111111011110"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000000000111111111111111111111111110111111111110"
+        }
+      ],
+      "41": [
+        {
+          "name": "budcache",
+          "bits": "00001111011111011111111110111111111110111111111110"
+        },
+        {
+          "name": "meancache",
+          "bits": "00000111101111111110111111111111110111111111111110"
+        },
+        {
+          "name": "dpcache",
+          "bits": "00011110111111110111111111110111111111101111101110"
+        },
+        {
+          "name": "uniform",
+          "bits": "00001111111111011111111110111111111110111111111100"
+        },
+        {
+          "name": "sencache_top1",
+          "bits": "00000011111111110111111111111111110111111111111110"
+        },
+        {
+          "name": "dicache_top1",
+          "bits": "00000011111111111111110111111111111111111111011110"
+        }
+      ]
+    }
+  },
+  "warm_starts_excluded": [
+    {
+      "model": "flux",
+      "k": 29,
+      "name": "teacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "00110110110110110101101101101101011010101010101010"
+    },
+    {
+      "model": "flux",
+      "k": 37,
+      "name": "teacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "00111011110111011101111011110111101110111011101110"
+    },
+    {
+      "model": "flux",
+      "k": 41,
+      "name": "seacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "00101101111011111101111111111011111111111011111110"
+    },
+    {
+      "model": "flux",
+      "k": 41,
+      "name": "teacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "00111111011111101111110111111011111101111110111110"
+    },
+    {
+      "model": "qwen",
+      "k": 41,
+      "name": "seacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "01011011101111101111111110111111111110111111110110"
+    },
+    {
+      "model": "qwen",
+      "k": 41,
+      "name": "teacache_top1",
+      "reason": "full steps omit the forced set (0, 1, 2, 49)",
+      "bits": "00111011111111011111111110111111111011111110111010"
+    }
+  ],
+  "anchor": {
+    "file": "resources/schedule_search/anchor_flux_k41.txt",
+    "schedules": [
+      {
+        "name": "table_best_rank_164762",
+        "bits": "00010101111011111111111101111111111111111011111110",
+        "full_steps": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          11,
+          24,
+          41,
+          49
+        ]
+      },
+      {
+        "name": "budcache",
+        "bits": "00010110111110111111011111111111111111101111111110",
+        "full_steps": [
+          0,
+          1,
+          2,
+          4,
+          7,
+          13,
+          20,
+          39,
+          49
+        ]
+      },
+      {
+        "name": "uniform",
+        "bits": "00001111111111011111111110111111111110111111111100",
+        "full_steps": [
+          0,
+          1,
+          2,
+          3,
+          14,
+          25,
+          37,
+          48,
+          49
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "text_render_word": {
+      "flux/drawbench_full": {
+        "file": "resources/prompts/prompt.txt",
+        "exact_word_hits": 0,
+        "derived_form_hits": 0
+      },
+      "flux/parti_full": {
+        "file": "resources/prompts/partiprompts_full_eval1632_seed42.txt",
+        "exact_word_hits": 0,
+        "derived_form_hits": 0
+      },
+      "flux/geneval_style": {
+        "file": "resources/prompts/geneval_seed43_n100.txt",
+        "exact_word_hits": 0,
+        "derived_form_hits": 0
+      },
+      "flux/diffusiondb_clean10k": {
+        "file": "resources/prompts/diffusiondb_2m_clean_10000_seed42.txt",
+        "exact_word_hits": 0,
+        "derived_form_hits": 8
+      },
+      "qwen/drawbench_full": {
+        "file": "reference/hicache/code/models/qwen_image/prompts/DrawBench200.txt",
+        "exact_word_hits": 0,
+        "derived_form_hits": 0
+      }
+    },
+    "calibration_prompts_in_evaluation_sets": 0,
+    "calibration_seeds": [
+      50042,
+      60042
+    ],
+    "evaluation_seed_streams": {
+      "flux": [
+        [
+          41,
+          10040
+        ],
+        [
+          42,
+          10041
+        ],
+        [
+          43,
+          10042
+        ]
+      ],
+      "qwen": [
+        [
+          42,
+          10041
+        ],
+        [
+          100042,
+          110041
+        ],
+        [
+          200042,
+          210041
+        ]
+      ]
+    }
+  },
+  "sources": {
+    "coco_captions": {
+      "path": "data/coco2014/annotations/captions_val2014.json",
+      "sha256": "7da4cc45cb76ee1642d163e846e1e0a33feffac2e841c9c426d585ea499165a4"
+    },
+    "coco_instances": {
+      "path": "data/coco2014/annotations/instances_val2014.json",
+      "sha256": "e1b4d1bc54906827b1a029981b1c77f2088bd4462569b7615db7929070c3ab47"
+    },
+    "diffusiondb_pool": {
+      "path": "resources/prompts/diffusiondb_2m_clean_calib512_seed20260729.txt",
+      "sha256": "162541807108e9743ffe5d4cc2e84f8aa697d6714fff1c594f038347d4e012eb"
+    },
+    "diffusiondb_metadata": {
+      "path": "resources/prompts/diffusiondb_2m_clean_calib512_seed20260729_metadata.jsonl",
+      "sha256": "20a76196b57382a2710d86b17a7f5fc96d8267ccc36ffd5a4c52b606e119ae94"
+    },
+    "warm_start_dir": "resources/sp_cross_schedules",
+    "exhaustive_summary": "resources/exhaustive_k41/formal_results/summary.json"
+  }
+}

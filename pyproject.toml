@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "golden-path-hypothesis"
+version = "0.1.0"
+description = "Experiment code for The Golden Path Hypothesis: Reusable Schedules in Diffusion Caching"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/nanguoyu/Golden-Path-Hypothesis"
+Documentation = "https://github.com/nanguoyu/Golden-Path-Hypothesis/blob/main/README.md"
+
+[tool.setuptools.packages.find]
+include = ["lib*", "flux*", "qwen_image*", "hunyuan_video*", "wan21*", "analysis*", "evaluation*"]
+exclude = ["reference*", "resources*", "tests*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

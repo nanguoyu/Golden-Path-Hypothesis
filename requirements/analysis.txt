@@ -1,0 +1,7 @@
+# CPU analysis and plotting. Reading saved .pt trajectories also requires torch.
+numpy
+scipy
+pandas
+matplotlib
+Pillow
+pytest

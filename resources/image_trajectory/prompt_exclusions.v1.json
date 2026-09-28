@@ -1,0 +1,24 @@
+{
+  "schema": "image_trajectory.prompt_exclusions.v1",
+  "applies_to": "resources/image_trajectory/prompt_sample.v1.json",
+  "rule": "the frozen draw is not edited; excluded indices are filtered out at merge time, and the verification report states the counts with and without them",
+  "excluded": [
+    {
+      "prompt_idx": 892,
+      "models": ["flux", "qwen"],
+      "n_cells_affected": 84,
+      "reason": "the replay does not reproduce the stored FLUX cell at this prompt, because the two clusters tokenize it differently",
+      "evidence": {
+        "prompt_is_the_only_non_ascii_one_in_the_sample": true,
+        "character": "U+2019 RIGHT SINGLE QUOTATION MARK, in \"conductor's\"",
+        "prompt_sha256_identical_on_both_clusters": true,
+        "clip_tokenizer_non_pad_tokens": {"transformers_4.57.1": 28, "transformers_5.8.1": 30},
+        "t5_tokenizer_token_ids_identical": true,
+        "stored_vs_replay_psnr_db": 21.58,
+        "mismatching_cells": "all 84 site_a-stored FLUX cells, at this prompt only; the 49 site_c-stored FLUX cells, every Qwen cell and the whole reference wave match",
+        "why_qwen_is_unaffected": "Qwen-Image does not use the CLIP text encoder"
+      },
+      "scope": "excluded from both models so the two keep one shared prompt sample; 50 drawn, 49 read"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "tolerance": 0.3,
+  "groups": {
+    "penguin599": {
+      "budgets": {
+        "k29": {
+          "family": "k29",
+          "target": 29,
+          "max_skip": 10,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 36,
+          "margin": 7,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9583,
+            "k_std": 0.4983,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "k29_n20": {
+          "family": "k29_n20",
+          "target": 29,
+          "max_skip": 20,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 38,
+          "margin": 9,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9583,
+            "k_std": 0.4983,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05
+          ]
+        },
+        "k29_n3": {
+          "family": "k29_n3",
+          "target": 29,
+          "max_skip": 3,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 30,
+          "margin": 1,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.9,
+            "k_mean": 29.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05
+          ]
+        },
+        "k29_n39": {
+          "family": "k29_n39",
+          "target": 29,
+          "max_skip": 39,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 39,
+          "margin": 10,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9583,
+            "k_std": 0.4983,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05
+          ]
+        },
+        "k37": {
+          "family": "k37",
+          "target": 37,
+          "max_skip": 39,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 39,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 1.6,
+            "k_mean": 37.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "k41": {
+          "family": "k41",
+          "target": 41,
+          "max_skip": 43,
+          "switch_ratio": 0.12,
+          "strict_steps": 6,
+          "ceiling": 43,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 2.9,
+            "k_mean": 41.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 4.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000001111",
+            "strict_window": 6,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K29": {
+          "family": "k29",
+          "target": 29,
+          "max_skip": 10,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 36,
+          "margin": 7,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9583,
+            "k_std": 0.4983,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K37": {
+          "family": "k37",
+          "target": 37,
+          "max_skip": 39,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 39,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 1.6,
+            "k_mean": 37.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K41": {
+          "family": "k41",
+          "target": 41,
+          "max_skip": 43,
+          "switch_ratio": 0.12,
+          "strict_steps": 6,
+          "ceiling": 43,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 2.9,
+            "k_mean": 41.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 4.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000001111",
+            "strict_window": 6,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        }
+      }
+    },
+    "vbench944": {
+      "budgets": {
+        "k29": {
+          "family": "k29",
+          "target": 29,
+          "max_skip": 10,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 36,
+          "margin": 7,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9375,
+            "k_std": 0.4285,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "k37": {
+          "family": "k37",
+          "target": 37,
+          "max_skip": 39,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 39,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 1.6,
+            "k_mean": 37.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "k41": {
+          "family": "k41",
+          "target": 41,
+          "max_skip": 43,
+          "switch_ratio": 0.12,
+          "strict_steps": 6,
+          "ceiling": 43,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 2.9,
+            "k_mean": 41.0208,
+            "k_std": 0.1428,
+            "first10_cache_mean": 4.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000001111",
+            "strict_window": 6,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K29": {
+          "family": "k29",
+          "target": 29,
+          "max_skip": 10,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 36,
+          "margin": 7,
+          "run_limit_inert": false,
+          "frozen": {
+            "start": 0.005,
+            "main": 0.31,
+            "k_mean": 28.9375,
+            "k_std": 0.4285,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K37": {
+          "family": "k37",
+          "target": 37,
+          "max_skip": 39,
+          "switch_ratio": 0.2,
+          "strict_steps": 10,
+          "ceiling": 39,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 1.6,
+            "k_mean": 37.0,
+            "k_std": 0.0,
+            "first10_cache_mean": 0.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000000000",
+            "strict_window": 10,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        },
+        "K41": {
+          "family": "k41",
+          "target": 41,
+          "max_skip": 43,
+          "switch_ratio": 0.12,
+          "strict_steps": 6,
+          "ceiling": 43,
+          "margin": 2,
+          "run_limit_inert": true,
+          "frozen": {
+            "start": 0.005,
+            "main": 2.9,
+            "k_mean": 41.0208,
+            "k_std": 0.1428,
+            "first10_cache_mean": 4.0,
+            "first10_unique_patterns": 1,
+            "first10_modal_pattern": "0000001111",
+            "strict_window": 6,
+            "strict_cache_mean": 0.0
+          },
+          "starts_rejected_as_too_strict": [],
+          "starts_swept": [
+            0.005,
+            0.01,
+            0.02,
+            0.05,
+            0.1,
+            0.2,
+            0.4,
+            0.8
+          ]
+        }
+      }
+    }
+  }
+}

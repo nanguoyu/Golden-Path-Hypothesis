@@ -1,0 +1,145 @@
+{
+  "schema": "video_spx.schedule_manifest.v1",
+  "produced_by": "analysis/build_video_spx_schedules.py",
+  "plan": "docs/video_sp_cross_plan_zh.md section 2",
+  "num_steps": 50,
+  "cache_bit_convention": "'1' = cached step, '0' = real computation",
+  "budgets": [
+    "K29",
+    "K37",
+    "K41"
+  ],
+  "payloads": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "max_gap": 15,
+  "rng_recipe": "numpy.random.default_rng([20260822, backbone_code, K, draw]) with backbone_code {'hunyuan_video': 1, 'wan21': 2}",
+  "schedule_count": 100,
+  "schedules_per_backbone_budget": {
+    "hunyuan_video/K29": 17,
+    "hunyuan_video/K37": 17,
+    "hunyuan_video/K41": 16,
+    "wan21/K29": 17,
+    "wan21/K37": 17,
+    "wan21/K41": 16
+  },
+  "cell_count": 417,
+  "cells_per_backbone_budget": {
+    "hunyuan_video/K29": 73,
+    "hunyuan_video/K37": 68,
+    "hunyuan_video/K41": 66,
+    "wan21/K29": 73,
+    "wan21/K37": 69,
+    "wan21/K41": 68
+  },
+  "off_budget_rows": [
+    {
+      "backbone": "hunyuan_video",
+      "gate": "sencache",
+      "budget": 37,
+      "realized_cache_count": 36
+    },
+    {
+      "backbone": "wan21",
+      "gate": "teacache",
+      "budget": 37,
+      "realized_cache_count": 36
+    },
+    {
+      "backbone": "wan21",
+      "gate": "seacache",
+      "budget": 41,
+      "realized_cache_count": 40
+    }
+  ],
+  "infeasible_cells": [
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "tea_top1_K37",
+      "payloads": [
+        "hermite_o2"
+      ]
+    },
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "sea_top1_K41",
+      "payloads": [
+        "di_two_anchor",
+        "hermite_o2",
+        "mean_vel"
+      ]
+    },
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "tea_top1_K41",
+      "payloads": [
+        "di_two_anchor",
+        "hermite_o2",
+        "mean_vel"
+      ]
+    }
+  ],
+  "span_variant_transports": [
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "meancache_K29",
+      "payload": "mean_vel_global",
+      "transport": "hunyuan_video/global_span/meancache_K29.json"
+    },
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "meancache_K37",
+      "payload": "mean_vel_global",
+      "transport": "hunyuan_video/global_span/meancache_K37.json"
+    },
+    {
+      "backbone": "hunyuan_video",
+      "schedule_id": "meancache_K41",
+      "payload": "mean_vel_global",
+      "transport": "hunyuan_video/global_span/meancache_K41.json"
+    },
+    {
+      "backbone": "wan21",
+      "schedule_id": "meancache_K29",
+      "payload": "mean_vel_global",
+      "transport": "wan21/global_span/meancache_K29.json"
+    },
+    {
+      "backbone": "wan21",
+      "schedule_id": "meancache_K37",
+      "payload": "mean_vel_global",
+      "transport": "wan21/global_span/meancache_K37.json"
+    },
+    {
+      "backbone": "wan21",
+      "schedule_id": "meancache_K41",
+      "payload": "mean_vel_global",
+      "transport": "wan21/global_span/meancache_K41.json"
+    }
+  ],
+  "first_step_preserving_ladder_unavailable": [
+    {
+      "backbone": "hunyuan_video",
+      "row": "ham8f",
+      "budget": 41,
+      "anchor_first_cache_step": 5,
+      "reason": "too few swappable steps in the window",
+      "swappable_full": 3,
+      "swaps_needed": 4
+    },
+    {
+      "backbone": "wan21",
+      "row": "ham8f",
+      "budget": 41,
+      "anchor_first_cache_step": 5,
+      "reason": "too few swappable steps in the window",
+      "swappable_full": 3,
+      "swaps_needed": 4
+    }
+  ],
+  "manifest_sha256": "3e636624c7f55b38ea16722d50210a70fa9e06ddcc121a5c1b30c5ec5250c2c4"
+}

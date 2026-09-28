@@ -1,0 +1,108 @@
+{
+  "schema": "video_spx.schedule.v1",
+  "schedule_id": "shared_K29",
+  "backbone": "hunyuan_video",
+  "row": "shared",
+  "group": "frozen",
+  "budget": "K29",
+  "nominal_k": 29,
+  "off_budget": false,
+  "num_steps": 50,
+  "bits": "00010110101101101011010110110101101011011010110110",
+  "cache_steps": [
+    3,
+    5,
+    6,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    18,
+    19,
+    21,
+    23,
+    24,
+    26,
+    27,
+    29,
+    31,
+    32,
+    34,
+    36,
+    37,
+    39,
+    40,
+    42,
+    44,
+    45,
+    47,
+    48
+  ],
+  "cache_count": 29,
+  "jvp_spans": {},
+  "jvp_span_global": 4,
+  "jvp_spans_are_per_edge": false,
+  "payload_modes": {
+    "reuse": "reuse_exact",
+    "taylor_o1": "taylorseer_exact",
+    "hermite_o2": "hicache_exact",
+    "mean_vel": "meancache_exact",
+    "di_two_anchor": "dicache"
+  },
+  "payload_feasible": {
+    "reuse": true,
+    "taylor_o1": true,
+    "hermite_o2": true,
+    "mean_vel": true,
+    "di_two_anchor": true
+  },
+  "payload_forbidden_steps": {
+    "reuse": [
+      0,
+      49
+    ],
+    "taylor_o1": [
+      0,
+      49
+    ],
+    "hermite_o2": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "mean_vel": [
+      0,
+      1,
+      49
+    ],
+    "di_two_anchor": [
+      0,
+      1,
+      49
+    ]
+  },
+  "payload_columns": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "source": "baseline_matrix_config.v1.json::schedule_tables.triplet_K29",
+  "provenance": {
+    "table_id": "triplet_K29",
+    "table_source_file": "local schedule search output",
+    "table_source_sha256": "dbea27bb6791378581fd91045e9a7b19d34344bb31cca17850984d302c2db7ec",
+    "matrix_config_sha256": "76ddc35e4e6919a58c81fe83823c7de44a24018c0d6ef5af18b5e01ea2a92d2a",
+    "jvp_spans_are_per_edge": false,
+    "hamming_to_meancache": 20,
+    "hamming_to_budcache": 24,
+    "transpositions_to_meancache": 10,
+    "longest_cached_run": 2,
+    "max_full_step_gap": 3,
+    "first_cache_step": 3
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "format": "qwen-image-meancache-schedule-v1",
+  "model": "qwen_image",
+  "num_steps": 50,
+  "cache_count": 29,
+  "full_count": 21,
+  "cache_steps": [
+    11,
+    13,
+    15,
+    16,
+    18,
+    19,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    48
+  ],
+  "full_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    14,
+    17,
+    20,
+    24,
+    29,
+    34,
+    41,
+    47,
+    49
+  ],
+  "jvp_spans": {
+    "11": 3,
+    "13": 3,
+    "15": 5,
+    "16": 5,
+    "18": 5,
+    "19": 5,
+    "21": 5,
+    "22": 5,
+    "23": 5,
+    "25": 5,
+    "26": 5,
+    "27": 5,
+    "28": 5,
+    "30": 5,
+    "31": 5,
+    "32": 5,
+    "33": 5,
+    "35": 5,
+    "36": 5,
+    "37": 5,
+    "38": 5,
+    "39": 5,
+    "40": 5,
+    "42": 5,
+    "43": 5,
+    "44": 5,
+    "45": 5,
+    "46": 5,
+    "48": 3
+  },
+  "gamma": 4.0,
+  "first_full_steps": 5,
+  "last_full_steps": 1,
+  "cost_shards": [
+    "outputs/cache_results/cross_model_stage_c_ec0b689/prep/qwen/train/meancache/cost_shard0of4.npz",
+    "outputs/cache_results/cross_model_stage_c_ec0b689/prep/qwen/train/meancache/cost_shard1of4.npz",
+    "outputs/cache_results/cross_model_stage_c_ec0b689/prep/qwen/train/meancache/cost_shard2of4.npz",
+    "outputs/cache_results/cross_model_stage_c_ec0b689/prep/qwen/train/meancache/cost_shard3of4.npz"
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "destination": 1,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.0
+    },
+    {
+      "source": 1,
+      "destination": 2,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.0
+    },
+    {
+      "source": 2,
+      "destination": 3,
+      "jvp_span": 3,
+      "mean_l1_cost": 0.0
+    },
+    {
+      "source": 3,
+      "destination": 4,
+      "jvp_span": 4,
+      "mean_l1_cost": 0.0
+    },
+    {
+      "source": 4,
+      "destination": 5,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.0
+    },
+    {
+      "source": 5,
+      "destination": 6,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.05903900980949402
+    },
+    {
+      "source": 6,
+      "destination": 7,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.05419175364077091
+    },
+    {
+      "source": 7,
+      "destination": 8,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.050789796262979504
+    },
+    {
+      "source": 8,
+      "destination": 9,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.048363891616463664
+    },
+    {
+      "source": 9,
+      "destination": 10,
+      "jvp_span": 2,
+      "mean_l1_cost": 0.04521680101752281
+    },
+    {
+      "source": 10,
+      "destination": 12,
+      "jvp_span": 3,
+      "mean_l1_cost": 0.10199828028678894
+    },
+    {
+      "source": 12,
+      "destination": 14,
+      "jvp_span": 3,
+      "mean_l1_cost": 0.08877004399895667
+    },
+    {
+      "source": 14,
+      "destination": 17,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.09894627213478088
+    },
+    {
+      "source": 17,
+      "destination": 20,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.084134905859828
+    },
+    {
+      "source": 20,
+      "destination": 24,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.08872942321002483
+    },
+    {
+      "source": 24,
+      "destination": 29,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.08795973867177963
+    },
+    {
+      "source": 29,
+      "destination": 34,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.07444717206060886
+    },
+    {
+      "source": 34,
+      "destination": 41,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.09089260309934616
+    },
+    {
+      "source": 41,
+      "destination": 47,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.09184780195355416
+    },
+    {
+      "source": 47,
+      "destination": 49,
+      "jvp_span": 3,
+      "mean_l1_cost": 0.07394683107733727
+    },
+    {
+      "source": 49,
+      "destination": 50,
+      "jvp_span": 5,
+      "mean_l1_cost": 0.01691997978836298
+    }
+  ]
+}

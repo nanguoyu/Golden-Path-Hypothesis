@@ -1,0 +1,26 @@
+# Python 3.12.13. Install the appropriate CUDA torch/torchvision pair first.
+# The exhaustive-family runner checks these generation-package versions.
+-r analysis.txt
+torch==2.12.0
+torchvision
+diffusers==0.38.0
+transformers==5.8.1
+tokenizers==0.22.2
+numpy==2.4.4
+Pillow==10.4.0
+accelerate
+huggingface-hub
+safetensors
+sentencepiece
+protobuf
+einops
+tqdm
+scikit-image
+lpips
+image-reward
+# Wan2.1's runtime uses these packages as well as a separately installed flash-attn.
+easydict
+ftfy
+regex
+imageio
+imageio-ffmpeg

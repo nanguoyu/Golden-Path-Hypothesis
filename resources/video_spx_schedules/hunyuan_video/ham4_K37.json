@@ -1,0 +1,126 @@
+{
+  "schema": "video_spx.schedule.v1",
+  "schedule_id": "ham4_K37",
+  "backbone": "hunyuan_video",
+  "row": "ham4",
+  "group": "control",
+  "budget": "K37",
+  "nominal_k": 37,
+  "off_budget": false,
+  "num_steps": 50,
+  "bits": "00000001111111110111011111010111111111101111111110",
+  "cache_steps": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    24,
+    25,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "cache_count": 37,
+  "jvp_spans": {},
+  "jvp_span_global": 4,
+  "jvp_spans_are_per_edge": false,
+  "payload_modes": {
+    "reuse": "reuse_exact",
+    "taylor_o1": "taylorseer_exact",
+    "hermite_o2": "hicache_exact",
+    "mean_vel": "meancache_exact",
+    "di_two_anchor": "dicache"
+  },
+  "payload_feasible": {
+    "reuse": true,
+    "taylor_o1": true,
+    "hermite_o2": true,
+    "mean_vel": true,
+    "di_two_anchor": true
+  },
+  "payload_forbidden_steps": {
+    "reuse": [
+      0,
+      49
+    ],
+    "taylor_o1": [
+      0,
+      49
+    ],
+    "hermite_o2": [
+      0,
+      1,
+      2,
+      49
+    ],
+    "mean_vel": [
+      0,
+      1,
+      49
+    ],
+    "di_two_anchor": [
+      0,
+      1,
+      49
+    ]
+  },
+  "payload_columns": [
+    "reuse",
+    "taylor_o1",
+    "hermite_o2",
+    "mean_vel",
+    "di_two_anchor"
+  ],
+  "source": "constructed: 2 random swaps from the meancache_K37 table",
+  "provenance": {
+    "anchor_row": "meancache",
+    "target_hamming": 4,
+    "realized_hamming": 4,
+    "rng": "default_rng([20260822, 1, 37, 12])",
+    "swaps": 2,
+    "draws_rejected": 1,
+    "swap_window": [
+      3,
+      48
+    ],
+    "rejection_rules": [
+      "popcount changed",
+      "distance != target",
+      "full-step gap > 15"
+    ],
+    "hamming_to_meancache": 4,
+    "hamming_to_budcache": 10,
+    "transpositions_to_meancache": 2,
+    "longest_cached_run": 10,
+    "max_full_step_gap": 11,
+    "first_cache_step": 7
+  }
+}

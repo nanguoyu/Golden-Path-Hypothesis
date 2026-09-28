@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this repository using the metadata below."
+type: software
+title: "The Golden Path Hypothesis: Reusable Schedules in Diffusion Caching"
+authors:
+  - family-names: Wang
+    given-names: Dong
+  - family-names: Tang
+    given-names: Wenwu
+  - family-names: Corti
+    given-names: Francesco
+  - family-names: Cheng
+    given-names: Yun
+  - family-names: Thiele
+    given-names: Lothar
+  - family-names: Saukh
+    given-names: Olga
+repository-code: "https://github.com/nanguoyu/Golden-Path-Hypothesis"
+url: "https://github.com/nanguoyu/Golden-Path-Hypothesis"
+license: MIT

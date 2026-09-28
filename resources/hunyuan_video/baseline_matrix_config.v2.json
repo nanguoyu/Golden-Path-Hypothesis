@@ -1,0 +1,766 @@
+{
+  "budgets": {
+    "K29": 29,
+    "K37": 37,
+    "K41": 41
+  },
+  "config_sha256": "5422ac75665a461092524c2f52a4af944e385935c6b171435f384fa0e9859b76",
+  "method_assets": {
+    "l2p": {
+      "l2p_weights": "2569fc868bd474d86632e6273d5352b10cf55abc3f52a98f56753c39c15d56a4"
+    },
+    "sencache": {
+      "sencache_sensitivity_path": "2c54e400b9442e4a9b07040948272599d4df34fff163903a6b98c53f9fb11a42"
+    }
+  },
+  "method_params": {
+    "dicache": {
+      "penguin599": {
+        "K29": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.2
+        },
+        "K37": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.2
+        },
+        "K41": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.1
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.2
+        },
+        "K37": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.2
+        },
+        "K41": {
+          "dicache_probe_depth": 1.0,
+          "dicache_ret_ratio": 0.1
+        }
+      }
+    },
+    "hicache_o2": {
+      "penguin599": {
+        "K29": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        },
+        "K37": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        },
+        "K41": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        },
+        "K37": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        },
+        "K41": {
+          "first_enhance": 3.0,
+          "sigma": 0.5
+        }
+      }
+    },
+    "l2p": {
+      "penguin599": {
+        "K29": {
+          "l2p_min_abs_weight": 0.0
+        },
+        "K37": {
+          "l2p_min_abs_weight": 0.0
+        },
+        "K41": {
+          "l2p_min_abs_weight": 0.0
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "l2p_min_abs_weight": 0.0
+        },
+        "K37": {
+          "l2p_min_abs_weight": 0.0
+        },
+        "K41": {
+          "l2p_min_abs_weight": 0.0
+        }
+      }
+    },
+    "seacache": {
+      "penguin599": {
+        "K29": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        },
+        "K37": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        },
+        "K41": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        },
+        "K37": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        },
+        "K41": {
+          "first_enhance": 1.0,
+          "power_exp": 3.0
+        }
+      }
+    },
+    "sencache": {
+      "penguin599": {
+        "K29": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 0.2
+        },
+        "K37": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 0.2
+        },
+        "K41": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 1.2
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 0.2
+        },
+        "K37": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 0.2
+        },
+        "K41": {
+          "first_enhance": 3.0,
+          "sencache_threshold_start": 1.2
+        }
+      }
+    },
+    "teacache": {
+      "penguin599": {
+        "K29": {
+          "first_enhance": 1.0
+        },
+        "K37": {
+          "first_enhance": 1.0
+        },
+        "K41": {
+          "first_enhance": 1.0
+        }
+      },
+      "vbench944": {
+        "K29": {
+          "first_enhance": 1.0
+        },
+        "K37": {
+          "first_enhance": 1.0
+        },
+        "K41": {
+          "first_enhance": 1.0
+        }
+      }
+    }
+  },
+  "num_steps": 50,
+  "protocol_id": "HY-CachePaper-480",
+  "schedule_tables": {
+    "budcache_K29": {
+      "cache_steps": [
+        12,
+        14,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/budcache/schedule_k29.json",
+      "source_sha256": "468dd42b30d2496ed1e30ad72aac9583f7569b9ed79dbb1176460ad7faf9665d"
+    },
+    "budcache_K37": {
+      "cache_steps": [
+        7,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/budcache/schedule_k37.json",
+      "source_sha256": "f0d05472822cad4b6869f50253a788aec54281f9849e30d11e600fb8fcdff76d"
+    },
+    "budcache_K41": {
+      "cache_steps": [
+        4,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/budcache/schedule_k41.json",
+      "source_sha256": "a47b89980768188eb80b9e30e9fbd67903e6451717ddc62ab1089220746ed333"
+    },
+    "meancache_K29": {
+      "cache_steps": [
+        11,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        48
+      ],
+      "jvp_spans": {
+        "11": 2,
+        "13": 2,
+        "15": 2,
+        "16": 2,
+        "18": 2,
+        "19": 2,
+        "20": 2,
+        "22": 2,
+        "23": 2,
+        "24": 2,
+        "25": 2,
+        "27": 2,
+        "28": 2,
+        "29": 2,
+        "30": 2,
+        "31": 2,
+        "33": 2,
+        "34": 2,
+        "35": 2,
+        "36": 2,
+        "37": 2,
+        "39": 2,
+        "40": 2,
+        "41": 2,
+        "42": 2,
+        "44": 2,
+        "45": 2,
+        "46": 2,
+        "48": 2
+      },
+      "source_file": "outputs/hunyuan_video/assets/meancache/schedule_k29.json",
+      "source_sha256": "28861cf33c0383ac0bfa9dcc16951ea5c81c22f637937419cbf377683e71a814"
+    },
+    "meancache_K37": {
+      "cache_steps": [
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "jvp_spans": {
+        "10": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2,
+        "17": 2,
+        "18": 2,
+        "19": 2,
+        "20": 2,
+        "21": 2,
+        "22": 2,
+        "23": 2,
+        "24": 2,
+        "25": 2,
+        "27": 2,
+        "28": 2,
+        "29": 2,
+        "30": 2,
+        "31": 2,
+        "32": 2,
+        "33": 2,
+        "34": 2,
+        "35": 2,
+        "36": 2,
+        "37": 2,
+        "38": 2,
+        "40": 2,
+        "41": 2,
+        "42": 2,
+        "43": 2,
+        "44": 2,
+        "45": 2,
+        "46": 2,
+        "47": 2,
+        "48": 2,
+        "7": 2,
+        "9": 2
+      },
+      "source_file": "outputs/hunyuan_video/assets/meancache/schedule_k37.json",
+      "source_sha256": "9f83141d3507be44eee6ebaa3bf88a493f180093a6a850e45e3a9fd2a52bc7fa"
+    },
+    "meancache_K41": {
+      "cache_steps": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "jvp_spans": {
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 2,
+        "16": 2,
+        "17": 2,
+        "18": 2,
+        "20": 2,
+        "21": 2,
+        "22": 2,
+        "23": 2,
+        "24": 2,
+        "25": 2,
+        "26": 2,
+        "27": 2,
+        "28": 2,
+        "29": 2,
+        "30": 2,
+        "31": 2,
+        "32": 2,
+        "33": 2,
+        "35": 2,
+        "36": 2,
+        "37": 2,
+        "38": 2,
+        "39": 2,
+        "40": 2,
+        "41": 2,
+        "42": 2,
+        "43": 2,
+        "44": 2,
+        "45": 2,
+        "46": 2,
+        "47": 2,
+        "48": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "9": 2
+      },
+      "source_file": "outputs/hunyuan_video/assets/meancache/schedule_k41.json",
+      "source_sha256": "50a3862e1fb4b847ded5da925d7c4a63fcbe796cafa615a20da2c238c4340bc4"
+    },
+    "triplet_K29": {
+      "cache_steps": [
+        3,
+        5,
+        6,
+        8,
+        10,
+        11,
+        13,
+        14,
+        16,
+        18,
+        19,
+        21,
+        23,
+        24,
+        26,
+        27,
+        29,
+        31,
+        32,
+        34,
+        36,
+        37,
+        39,
+        40,
+        42,
+        44,
+        45,
+        47,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/triplet/schedule_K29.json",
+      "source_sha256": "dbea27bb6791378581fd91045e9a7b19d34344bb31cca17850984d302c2db7ec"
+    },
+    "triplet_K37": {
+      "cache_steps": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/triplet/schedule_K37.json",
+      "source_sha256": "447195035645975e3dab3a377624a6f9f6af7567ad756d14bb6b66e071c43ef6"
+    },
+    "triplet_K41": {
+      "cache_steps": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "source_file": "outputs/hunyuan_video/assets/triplet/schedule_K41.json",
+      "source_sha256": "fc503865100895115bbc68593c25433cbd0d0145772d5b9e75ec35fec0ff409c"
+    }
+  },
+  "schedules": {
+    "budcache": {
+      "K29": "budcache_K29",
+      "K37": "budcache_K37",
+      "K41": "budcache_K41"
+    },
+    "hicache_o2": {
+      "K29": "triplet_K29",
+      "K37": "triplet_K37",
+      "K41": "triplet_K41"
+    },
+    "l2p": {
+      "K29": "triplet_K29",
+      "K37": "triplet_K37",
+      "K41": "triplet_K41"
+    },
+    "meancache": {
+      "K29": "meancache_K29",
+      "K37": "meancache_K37",
+      "K41": "meancache_K41"
+    },
+    "taylorseer_o1": {
+      "K29": "triplet_K29",
+      "K37": "triplet_K37",
+      "K41": "triplet_K41"
+    }
+  },
+  "schema": "hunyuan_video.baseline_matrix_config.v1",
+  "threshold_calibration": {
+    "penguin599": {
+      "file": "resources/hunyuan_video/calibration/penguin_b-cal48.txt",
+      "sha256": "b44a037a72e7482fa3f9a227e1804f15093171d34e6727b34006c4bc93a13c20"
+    },
+    "vbench944": {
+      "file": "resources/hunyuan_video/calibration/vbench_cal48.txt",
+      "sha256": "f6ff14dc3739a6e1ef94ff0d8729641db0571fa09a2af0b223698ff20c4b2cca"
+    }
+  },
+  "thresholds": {
+    "dicache": {
+      "penguin599": {
+        "K29": 0.1,
+        "K37": 0.9,
+        "K41": 0.6
+      },
+      "vbench944": {
+        "K29": 0.1,
+        "K37": 0.9,
+        "K41": 0.6
+      }
+    },
+    "seacache": {
+      "penguin599": {
+        "K29": 0.33,
+        "K37": 0.63,
+        "K41": 1.0
+      },
+      "vbench944": {
+        "K29": 0.33,
+        "K37": 0.63,
+        "K41": 1.0
+      }
+    },
+    "sencache": {
+      "penguin599": {
+        "K29": 0.5,
+        "K37": 3.0,
+        "K41": 3.0
+      },
+      "vbench944": {
+        "K29": 0.5,
+        "K37": 3.0,
+        "K41": 3.0
+      }
+    },
+    "teacache": {
+      "penguin599": {
+        "K29": 0.155,
+        "K37": 0.28,
+        "K41": 0.5
+      },
+      "vbench944": {
+        "K29": 0.155,
+        "K37": 0.28,
+        "K41": 0.5
+      }
+    }
+  }
+}
