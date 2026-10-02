@@ -2,6 +2,8 @@
 
 **Dong Wang, Wenwu Tang, Francesco Corti, Yun Cheng, Lothar Thiele, Olga Saukh**
 
+![Golden Path Hypothesis promotional banner with a golden snack bag and floating chips.](docs/figures/gph_chips_horizontal.jpg)
+
 [Research](#research-in-brief) ·
 [Code and experiments](#research-and-code) ·
 [Experimental scale](#experimental-scale) ·

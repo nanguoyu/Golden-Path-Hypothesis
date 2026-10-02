@@ -26,6 +26,7 @@ logs/
 !docs/figures/schedule-transfer.png
 !docs/figures/figure-1.png
 *.jpg
+!docs/figures/gph_chips_horizontal.jpg
 *.jpeg
 *.pdf
 *.parquet
